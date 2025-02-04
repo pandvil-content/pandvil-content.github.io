@@ -1,0 +1,156 @@
+body,[class~=controls] {
+    display:flex;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 360px;
+    position: relative;
+    height: 40pc;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#imageCanvas {
+    width: 360px;
+    height: 40pc;
+    border: 0.75pt solid #ccc;
+    background: #fff;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.controls {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-right:.208333333in;
+}
+
+.download-panel {
+    position:fixed;
+    left:250pt;
+    top:15pc;
+    width:15pc;
+    background:#fff;
+    box-shadow:0 0 10px rgba(0,0,0,.1);
+    border-radius:.083333333in;
+    border:0.75pt solid #ccc;
+    padding:.208333333in;
+    z-index:10;
+}
+
+.formatted-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px 0;
+}
+
+
+.platform-tag {
+    display: inline-block;
+    background-color: #e0e0e0;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-size: 0.875rem;
+    color: #333;
+    margin: 0 0.25rem;
+}
+
+
+.emoji-box {
+    display:flex;
+    gap:10px;
+    margin-bottom:.625pc;
+}
+
+.emoji {
+    font-size:24px;
+    cursor:pointer;
+}
+
+
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+        align-items:center;
+        height:auto;
+        overflow:auto;
+    }
+
+    .download-panel {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        margin: 0;
+        padding: 10px;
+        border-bottom:1px solid #ccc;
+    }
+
+    #imageCanvas {
+        width:90vw;
+        height:auto;
+        margin-top:20px;
+        margin-bottom:20px;
+    }
+
+    .container {
+        width:100%;
+        height:auto;
+        margin:0;
+    }
+
+    .controls {
+        width:90vw;
+        margin-right:0;
+        margin-bottom:20px;
+    }
+}
+@media (orientation: portrait) {
+    .download-panel {
+        position: fixed;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 0.083333333in;
+        border: 0.75pt solid #ccc; }
+
+
+    #imageCanvas {
+        width:50%;
+        height:50%;
+        margin-top:200px;
+        margin-bottom:20px;
+    }
+
+    .container {
+        width:100%;
+        height:auto;
+        margin:0;
+    }
+
+    .controls {
+        width:90vw;
+        margin-right:0;
+        margin-bottom:20px;
+    }
+}
